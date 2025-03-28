@@ -1,0 +1,28 @@
+Gradle은 의존관계가 있는 라이브러리를 함께 다운로드 한다.
+
+톰캣
+타임리프
+스프링부트 스타터
+    스프링부트와 관련된 라이브러리
+    스프링 코어도 땡김
+    스프링과 관련된 세팅이 ~..
+로그
+    실무에서는 로그를 써야한다 prinln 을 거의 쓰지 않음
+    slf4j
+    로그백
+
+테스트 라이브러리
+    Junit 라이브러리
+        테스트 프레임워크
+    Spring-Test
+        스프링 통합 테스트 지원
+
+
+검색방법
+spring.io
+projedcts-spring boot
+learn
+    version 3.x.x
+        welcome page
+
+
