@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>성적 수정</title>
+</head>
+<body>
+<h2>성적 수정</h2>
+<form th:action="@{/grades/edit/{id}(id=${grade.id})}" method="post">
+    <div>
+        <label>이름</label>
+        <input type="text" name="name" th:value="${grade.name}" required />
+    </div>
+    <div>
+        <label>학번</label>
+        <input type="text" name="studentNumber" th:value="${grade.studentNumber}" required />
+    </div>
+    <div>
+        <label>성적</label>
+        <input type="number" name="score" th:value="${grade.score}" required />
+    </div>
+    <button type="submit">저장</button>
+    <button onclick="location.href='/grades/gradeList'">취소</button>
+</form>
+</body>
+</html>

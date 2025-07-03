@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>회원 등록</title>
+</head>
+<body>
+<div class="container">
+    <form action="/members/new" method="post">
+        <!-- 이름 입력 -->
+        <div class="form-group">
+            <label for="name">name</label>
+            <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required>
+        </div>
+
+        <!-- 나이 입력 -->
+        <div class="form-group">
+            <label for="age">age</label>
+            <input type="number" id="age" name="age" placeholder="나이를 입력하세요" required>
+        </div>
+
+        <!-- 이메일 입력 -->
+        <div class="form-group">
+            <label for="email">email</label>
+            <input type="email" id="email" name="email" placeholder="이메일을 입력하세요" required>
+        </div>
+
+        <!-- 알레르기 정보 -->
+        <!-- 알레르기 정보 선택 (radio 버튼으로 변경) -->
+        <div class="form-group">
+            <label>happy?</label><br>
+
+            <input type="radio" id="allergyTrue" name="allergyInfo" value="true" required>
+            <label for="allergyTrue">yes</label>
+
+            <input type="radio" id="allergyFalse" name="allergyInfo" value="false">
+            <label for="allergyFalse">no</label>
+        </div>
+
+        <button type="submit">join now</button>
+    </form>
+</div> <!-- /container -->
+</body>
+</html>
