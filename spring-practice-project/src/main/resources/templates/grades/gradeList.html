@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>성적 목록</title>
+</head>
+<body>
+<h2>성적 목록</h2>
+<table border="1">
+    <tr>
+        <th>이름</th>
+        <th>학번</th>
+        <th>성적</th>
+        <th>수정</th>
+        <th>삭제</th>
+    </tr>
+    <tr th:each="grade : ${gradeList}">
+        <td th:text="${grade.name}"></td>
+        <td th:text="${grade.studentNumber}"></td>
+        <td th:text="${grade.score}"></td>
+        <td>
+            <a th:href="@{/grades/edit/{id}(id=${grade.id})}">수정</a>
+        </td>
+        <td>
+            <form th:action="@{/grades/delete/{id}(id=${grade.id})}" method="post">
+                <button type="submit">삭제</button>
+            </form>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
