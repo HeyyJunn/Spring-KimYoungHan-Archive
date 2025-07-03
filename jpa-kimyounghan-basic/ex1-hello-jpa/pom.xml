@@ -15,7 +15,7 @@
     </properties>
 
     <dependencies>
-        <!-- JPA 하이버네이트 -->
+        <!-- ✅ JPA 하이버네이트 -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
@@ -28,21 +28,30 @@
             <version>2.3.1</version>
         </dependency>
 
-        <!-- H2 데이터베이스 -->
+        <!-- ✅ MySQL JDBC 드라이버 추가 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.33</version>
+        </dependency>
+
+        <!-- 🔽 필요 없으면 삭제해도 되는 H2 DB (현재는 주석처리함) -->
+        <!--
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <version>2.2.224</version>
         </dependency>
+        -->
 
-        <!-- logback -->
-<!--
+        <!-- 🔽 logback 필요하면 주석 해제 -->
+        <!--
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>1.4.14</version>
         </dependency>
--->
+        -->
     </dependencies>
 
 </project>
